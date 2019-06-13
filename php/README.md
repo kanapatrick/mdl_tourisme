@@ -5,24 +5,21 @@
 
 ## Exercice 1 ## 
 
-Créer un fichier texte pour la liste de course des ingrédients
-
-- la liste des ingrédients est disponible dans le fichier data.php 
-- le fichier texte doit être généré dans ce repertoire
+**Créer un fichier JSON** pour la liste de course des ingrédients
 
 ## Exercice 2 ##
 
 - nous faisons du popcorn 4 fois par mois
 - il y a 30 personnes sur le plateau
 
-Combien faut-il d'ingrédients par mois ? Générer le résultat en JSON en partant de la liste pour 4 personnes de l'exercice précédent
+Combien faut-il d'ingrédients par mois ? **Générer le résultat en JSON** en partant de la liste pour 4 personnes de l'exercice précédent
 
 ## Exercice 3 ## 
 
 - Nous faisons aussi du popcorn à chaque anniversaire
 - La liste des anniversaires est disponible dans le fichier data.php 
 
-Mettre à jour le script de la quantité des ingrédients nécessaires pour le mois prochain avec cette nouvelle information
+Mettre à jour le script de la quantité des ingrédients nécessaires pour le mois prochain avec cette nouvelle information et **générer le résultat en JSON**
 
 ### Pour utiliser docker ###
 
