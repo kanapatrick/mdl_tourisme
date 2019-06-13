@@ -10,8 +10,8 @@
 
 ## Exercice 2 ##
 
-- nous faisons du popcorn 4 fois par mois
-- il y a 30 personnes sur le plateau
+- Nous faisons du popcorn 4 fois par mois
+- Il y a 30 personnes sur le plateau
 
 Combien faut-il d'ingrédients par mois ? **Générer le résultat en JSON** en partant de la liste pour 4 personnes de l'exercice précédent
 
