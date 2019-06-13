@@ -13,12 +13,12 @@ $stock = [
 ];
 
 /**
- * Pour faire du popcorn pour 4 personnes, il nous faut :
- *  - 50g de maïs
- *  - 30g de beurre
- *  - 30g de sucre
- *  - 2g d'huile
- *  - 2g de sel
+ * Pour faire du popcorn pour 2 personnes, il nous faut :
+ *  - 25g de maïs
+ *  - 15g de beurre
+ *  - 15g de sucre
+ *  - 1g d'huile
+ *  - 1g de sel
  *
  * @TODO :
  *   - Mettre à jour $stock en fonction de ces informations

@@ -1,11 +1,11 @@
 <?php
 
-$fourPeoplePopcornRecipe = [
-    'corn'   => 50,
-    'butter' => 30,
-    'sugar'  => 30,
-    'oil'    => 2,
-    'salt'   => 2,
+$twoPeoplePopcornRecipe = [
+    'corn'   => 25,
+    'butter' => 15,
+    'sugar'  => 15,
+    'oil'    => 1,
+    'salt'   => 1,
 ];
 
 $monthStock = [
@@ -22,7 +22,7 @@ $monthStock = [
  * @TODO
  *   - Mettre à jour la variable $monthStock avec les ingrédients nécessaires pour le mois prochain avec cette nouvelle information
  *   - Utiliser le fichier birthdays.json de ce répertoire
- *   - La variable $fourPeoplePopcornRecipe correspond aux ingrédients nécessaires pour 4 personnes
+ *   - La variable $twoPeoplePopcornRecipe correspond aux ingrédients nécessaires pour 2 personnes
  *   - Générer une réponse en JSON
  */
 

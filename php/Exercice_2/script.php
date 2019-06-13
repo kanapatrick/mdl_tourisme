@@ -3,12 +3,12 @@
 /**
  * Variables
  */
-$fourPeoplePopcornRecipe = [
-    'corn'   => 50,
-    'butter' => 30,
-    'sugar'  => 30,
-    'oil'    => 2,
-    'salt'   => 2,
+$twoPeoplePopcornRecipe = [
+    'corn'   => 25,
+    'butter' => 15,
+    'sugar'  => 15,
+    'oil'    => 1,
+    'salt'   => 1,
 ];
 
 $stock = [
@@ -25,7 +25,7 @@ $stock = [
  *
  * @TODO
  *   - Mettre à jour la variable $stock avec ces nouvelles informations
- *   - La variable $fourPeoplePopcornRecipe correspond aux ingrédients nécessaires pour 4 personnes
+ *   - La variable $twoPeoplePopcornRecipe correspond aux ingrédients nécessaires pour 2 personnes
  *   - Générer une réponse en JSON avec la liste des quantités mensuelles nécessaires de chaque ingrédient
  */
 

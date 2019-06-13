@@ -20,7 +20,7 @@ Combien faut-il d'ingrédients par mois ? **Générer le résultat en JSON** en 
 - Nous faisons aussi du popcorn à chaque anniversaire
 - La liste des anniversaires est disponible dans le fichier birthdays.json
 
-Mettre à jour le script de la quantité des ingrédients nécessaires pour le mois prochain avec cette nouvelle information et **générer le résultat en JSON**
+Mettre à jour le script de la quantité des ingrédients nécessaires **pour le mois prochain** avec cette nouvelle information et **générer le résultat en JSON**
 
 ### Pour utiliser docker ###
 
