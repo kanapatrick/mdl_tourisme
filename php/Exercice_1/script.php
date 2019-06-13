@@ -5,11 +5,11 @@
  */
 
 $stock = [
-    'corn'   => 50,
-    'butter' => 30,
-    'sugar'  => 30,
-    'oil'    => 2,
-    'salt'   => 2,
+    'corn'   => 0,
+    'butter' => 0,
+    'sugar'  => 0,
+    'oil'    => 0,
+    'salt'   => 0,
 ];
 
 /**
