@@ -1,0 +1,11 @@
+version: "3"
+services:
+  eurelis:
+    container_name: eurelis
+    image: eurelis/aws-ami-php7:php72
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 80:80
+      - 443:443
