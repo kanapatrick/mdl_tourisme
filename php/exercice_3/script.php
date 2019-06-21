@@ -53,7 +53,7 @@ $stock = [
  * @TODO
  * - Un employé reste en moyenne 5 ans chez Eurelis
  * - En moyenne nous recrutons 12 nouvelles personnes par an
- * - Calculez le $stock necessaire pour une fournée de popcorn Avril 2032
+ * - Calculez le $stock necessaire pour une fournée de popcorn en Avril 2032
  * - Mettez à jour $population pour Avril 2032
  */
 
