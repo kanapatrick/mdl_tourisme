@@ -1,28 +1,25 @@
 # Eurelis - Test de recrutement #
 
+## Consignes & règles 
+
 - Durée : 45 mins
 - Les exercices sont indépendants
-- L'exercice 3 est optionnel (développeurs seniors)
+- Les exercices ont une difficulté croissante 
+- Tout est autorisé (internet, librairies externes, etc ...)
 
-## Exercice 1 ## 
+##Notation
+Les critères suivants sont prit compte pour la notation :
+- résultat
+- lisibilité / clarté du code
+- innovation 
 
-**Créer un fichier JSON** pour la liste de course des ingrédients
+##Docker
+- lancer le container :
+```docker-compose up -d```
 
-## Exercice 2 ##
+- exécuter un script : 
+```docker-compose exec eurelis php exercice_X/script.php```
 
-- Nous faisons du popcorn 4 fois par mois
-- Il y a 30 personnes sur le plateau
+- utiliser composer
+```docker-compose exec eurelis composer [XXXX] ```
 
-Combien faut-il d'ingrédients par mois ? **Générer le résultat en JSON** en partant de la liste pour 4 personnes de l'exercice précédent
-
-## Exercice 3 ## 
-
-- Nous faisons aussi du popcorn à chaque anniversaire
-- La liste des anniversaires est disponible dans le fichier birthdays.json
-
-Mettre à jour le script de la quantité des ingrédients nécessaires **pour le mois prochain** avec cette nouvelle information et **générer le résultat en JSON**
-
-### Pour utiliser docker ###
-
-- todo = docker avec php7
-- todo = lister les principales commandes docker
