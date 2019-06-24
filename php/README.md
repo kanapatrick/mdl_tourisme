@@ -20,6 +20,6 @@ Les critères suivants sont prit compte pour la notation :
 - exécuter un script : 
 ```docker-compose exec eurelis php exercice_X/script.php```
 
-- utiliser composer
+- utiliser composer :
 ```docker-compose exec eurelis composer [XXXX] ```
 
