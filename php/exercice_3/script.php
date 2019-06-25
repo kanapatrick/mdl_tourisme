@@ -17,28 +17,29 @@ $twoPeoplePopcornRecipe = [
     'salt'   => 1,
 ];
 
+// Prénom => Date d'arrivée chez Eurelis
 $population = [
-    'Antoine',
-    'Antonin',
-    'Bader',
-    'Celine',
-    'Charles',
-    'Cyril',
-    'Kathleen',
-    'Eglantine',
-    'Florian',
-    'Guillaume',
-    'Jean',
-    'Jerome',
-    'Julien',
-    'Melanie',
-    'Philippe',
-    'Sandrine',
-    'Sylvain',
-    'Vincent',
-    'Yassine',
-    'Yousri',
-    'Zehuan'
+    'Antoine'   => '2008-01-10',
+    'Antonin'   => '2018-03-10',
+    'Bader'     => '2018-05-17',
+    'Celine'    => '2019-04-07',
+    'Charles'   => '2019-02-17',
+    'Cyril'     => '2011-11-27',
+    'Kathleen'  => '2018-02-07',
+    'Eglantine' => '2013-04-17',
+    'Florian'   => '2012-06-17',
+    'Guillaume' => '2017-08-07',
+    'Jean'      => '2016-10-27',
+    'Jerome'    => '2009-12-17',
+    'Julien'    => '2014-01-27',
+    'Melanie'   => '2019-05-01',
+    'Philippe'  => '2002-06-07',
+    'Sandrine'  => '2009-09-17',
+    'Sylvain'   => '2013-12-27',
+    'Vincent'   => '2003-02-17',
+    'Yassine'   => '2018-05-07',
+    'Yousri'    => '2018-10-17',
+    'Zehuan'    => '2018-08-20'
 ];
 
 $stock = [
@@ -62,6 +63,7 @@ $stock = [
 
 /**
  * Response
+ * DO NOT TOUCH
  */
 print_r($stock);
 print_r($population);

@@ -5,7 +5,8 @@
 - Durée : 45 mins
 - Les exercices sont indépendants
 - Les exercices ont une difficulté croissante 
-- Tout est autorisé (internet, librairies externes, etc ...)
+- Toute aide est autorisée (internet, librairies externes, etc ...)
+- Toute prise d'intiative / proposition, tant qu'elle est correctement justifiée, est accéptée. 
 
 ##Notation
 Les critères suivants sont prit compte pour la notation :
