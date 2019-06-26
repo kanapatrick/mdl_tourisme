@@ -8,13 +8,13 @@
 - Toute aide est autorisée (internet, librairies externes, etc ...)
 - Toute prise d'intiative / proposition, tant qu'elle est correctement justifiée, est accéptée. 
 
-##Notation
+## Notation
 Les critères suivants sont prit compte pour la notation :
 - résultat
 - lisibilité / clarté du code
 - innovation 
 
-##Docker
+## Docker
 - lancer le container :
 ```docker-compose up -d```
 
