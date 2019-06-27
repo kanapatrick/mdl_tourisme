@@ -4,11 +4,15 @@
  * Variables
  * DO NOT TOUCH
  */
+// La possibilité de base de départ d'un employé est de 9%
+// La formule de calcule par ancienneté est la suivate :
+// f($seniority) = $base_leaving_assumption + ( (log($seniority) * $base_leaving_assumption) )
+$base_leaving_assumption = 0.09 ;
 
-$avg_duration = 5 ; // years
+// Le taux de croissance est 22%  par an
+$growth_rate = 0.22 ;
 
-$avg_new = 12 ; // employee
-
+// Les ingrédients nécessaires pour 2 personnes
 $twoPeoplePopcornRecipe = [
     'corn'   => 25,
     'butter' => 15,
@@ -53,9 +57,6 @@ $stock = [
 /**
  * @TODO
  * - Nous faisons du popcorn uniquement tout les lundis
- * - Un employé reste en moyenne 5 ans chez Eurelis (variable $avg_duration)
- * - En moyenne nous recrutons 12 nouvelles personnes par an (variable $avg_new)
- * - La variable $twoPeoplePopcornRecipe correspond aux ingrédients nécessaires pour 2 personnes
  * - Calculez le $stock necessaire pour une fournée de popcorn pour le mois d'Avril 2032 en prenant en compte le turnover (arrivées / départs).
  * - Mettez à jour $population pour Avril 2032
  */
