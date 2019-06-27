@@ -16,7 +16,7 @@ $stock = [
 /**
  * @TODO :
  *   - Mettre à jour dynamiquement $stock en fonction du stock actuel disponible sur https://api.myjson.com/bins/x6l6h
- *   - Enregister $stock dans un fichier stock.json (au même niveau que script.php)
+ *   - Enregistrer $stock dans un fichier stock.json (au même niveau que script.php)
  */
 
 

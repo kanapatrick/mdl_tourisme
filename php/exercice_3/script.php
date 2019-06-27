@@ -4,15 +4,11 @@
  * Variables
  * DO NOT TOUCH
  */
-// La possibilité de base de départ d'un employé est de 9%
-// La formule de calcule par ancienneté est la suivate :
-// f($seniority) = $base_leaving_assumption + ( (log($seniority) * $base_leaving_assumption) )
-$base_leaving_assumption = 0.09 ;
 
-// Le taux de croissance est 22%  par an
-$growth_rate = 0.22 ;
+$avg_duration = 5 ; // years
 
-// Les ingrédients nécessaires pour 2 personnes
+$avg_new = 12 ; // employee
+
 $twoPeoplePopcornRecipe = [
     'corn'   => 25,
     'butter' => 15,
@@ -56,9 +52,9 @@ $stock = [
 
 /**
  * @TODO
- * - Nous faisons du popcorn uniquement tout les lundis
- * - Calculez le $stock necessaire pour une fournée de popcorn pour le mois d'Avril 2032 en prenant en compte le turnover (arrivées / départs).
- * - Mettez à jour $population pour Avril 2032
+ * - Nous faisons du popcorn uniquement tous les lundis
+ * - Calculez le $stock nécessaire pour une fournée de popcorn pour le mois d'Avril 2032 en prenant en compte le turnover (arrivées / départs).
+ * - Mettez à jour $population pour avril 2032
  */
 
 

@@ -22,7 +22,7 @@ $stock = [
 
 /**
  * @TODO
- *   - Nous faisons du popcorn tout les lundis
+ *   - Nous faisons du popcorn tous les lundis
 *    - Nous faisons du popcorn pour chaque anniversaire ( birthdays.json )
  *   - Il y a 30 personnes sur le plateau
  *   - La variable $twoPeoplePopcornRecipe correspond aux ingrédients nécessaires pour 2 personnes
