@@ -11,6 +11,7 @@ $stock = [
     'sugar'  => 0,
     'oil'    => 0,
     'salt'   => 0,
+    'pepper' => 0,
 ];
 
 /**
