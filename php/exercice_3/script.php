@@ -7,7 +7,7 @@
 
 // La possibilité de base de départ d'un employé est de 9%
 // La formule de calcule par ancienneté est la suivate :
-// f($seniority) = $base_leaving_assumption + ( (log($seniority) * $base_leaving_assumption) )
+// f($seniority) = $base_leaving_assumption + (log($seniority) * $base_leaving_assumption)
 $base_leaving_assumption = 0.09 ;
 
 // Le taux de croissance est 22%  par an
