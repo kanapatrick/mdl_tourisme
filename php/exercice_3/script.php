@@ -5,10 +5,15 @@
  * DO NOT TOUCH
  */
 
-$avg_duration = 5 ; // years
+// La possibilité de base de départ d'un employé est de 9%
+// La formule de calcule par ancienneté est la suivate :
+// f($seniority) = $base_leaving_assumption + ( (log($seniority) * $base_leaving_assumption) )
+$base_leaving_assumption = 0.09 ;
 
-$avg_new = 12 ; // employee
+// Le taux de croissance est 22%  par an
+$growth_rate = 0.22 ;
 
+// Les ingrédients nécessaires pour 2 personnes
 $twoPeoplePopcornRecipe = [
     'corn'   => 25,
     'butter' => 15,
