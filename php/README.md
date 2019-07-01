@@ -21,8 +21,8 @@ Les critères suivants seront pris en compte pour la notation :
 - lancer le container :
 ```docker-compose up -d```
 
-- exécuter un script : 
-```docker-compose exec eurelis php exercice_X/script.php```
+- exécuter un exercice : 
+```docker-compose exec eurelis php exercice_X/check.php```
 
 - utiliser composer :
 ```docker-compose exec eurelis composer [XXXX] ```
