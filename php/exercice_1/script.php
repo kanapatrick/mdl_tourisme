@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Base function
+ * DO NO TOUCH
+ * @return array
+ */
 function ex1() {
     /**
      * Variables
