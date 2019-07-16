@@ -4,33 +4,27 @@ include 'script.php';
 include 'custom_assert.php';
 
 
-// Check Lundi only
-$stock_to_check = ex2(2020, 07); // Sans anniversaires (4)
+$stock_to_check = ex2(2020, 07);
 $good_stock = json_decode('{"corn":50,"butter":20,"sugar":20,"oil":8,"salt":8}', true);
-custom_assert($stock_to_check == $good_stock, 'Résultat uniquement Lundi');
+custom_assert($stock_to_check == $good_stock, 'Test 1');
 
-// Check Lundi + anniversaire
-$stock_to_check = ex2(2019, 01); // Avec 1 anniversaire (5)
+$stock_to_check = ex2(2019, 01);
 $good_stock = json_decode('{"corn":37.5,"butter":12.5,"sugar":12.5,"oil":7.5,"salt":7.5}', true);
-custom_assert($stock_to_check == $good_stock, 'Résultat Lundi + Anniversaires');
+custom_assert($stock_to_check == $good_stock, 'Test 2');
 
-// Check anniversaire le même jour
-$stock_to_check = ex2(2019, 06); // Avec 2 anniversaies le même jour (6)
+$stock_to_check = ex2(2019, 06);
 $good_stock = json_decode('{"corn":25,"butter":5,"sugar":5,"oil":7,"salt":7}', true);
-custom_assert($stock_to_check == $good_stock, 'Résultat Anniversaires le même jour');
+custom_assert($stock_to_check == $good_stock, 'Test 3');
 
-// Check weekend
-$stock_to_check = ex2(2021, 01); // Avec 1 anniversaire un weekend (4)
+$stock_to_check = ex2(2021, 01);
 $good_stock = json_decode('{"corn":50,"butter":20,"sugar":20,"oil":8,"salt":8}', true);
-custom_assert($stock_to_check == $good_stock, 'Résultat anniversaire en weekend');
+custom_assert($stock_to_check == $good_stock, 'Test 4');
 
-// Check fin de stock
-$stock_to_check = ex2(2021, 05); // Check stock
+$stock_to_check = ex2(2021, 05);
 $good_stock = json_decode('{"corn":12.5,"butter":0,"sugar":0,"oil":6.5,"salt":6.5}', true);
-custom_assert($stock_to_check == $good_stock, 'Résultat stock');
+custom_assert($stock_to_check == $good_stock, 'Test 5');
 
-// Lundi + anniversaire + jour férié
-$stock_to_check = ex2(2019, 11); // Anniversaire un jour férié (4)
+$stock_to_check = ex2(2019, 11);
 $good_stock = json_decode('{"corn":50,"butter":20,"sugar":20,"oil":8,"salt":8}', true);
-custom_assert($stock_to_check == $good_stock, 'Résultat jours fériés');
+custom_assert($stock_to_check == $good_stock, 'Test 6');
 

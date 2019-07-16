@@ -32,7 +32,7 @@ function ex2($year, $month)
     /**
      * @TODO
      *   - Nous faisons du popcorn tous les lundis
-     *    - Nous faisons du popcorn pour chaque anniversaire ( birthdays.json )
+     *   - Nous faisons du popcorn pour chaque anniversaire ( birthdays.json )
      *   - Il y a 30 personnes sur le plateau
      *   - La variable $twoPeoplePopcornRecipe correspond aux ingrédients nécessaires pour 2 personnes
      *   - Mettre à jour la variable $stock pour la fin du mois $month de l'année $year
