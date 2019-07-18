@@ -19,9 +19,13 @@ Les critères suivants seront pris en compte pour la notation :
 - lancer le container :
 ```docker-compose up -d```
 
-- exécuter et tester un exercice : 
-```docker-compose exec eurelis php exercice_X/check.php```
+- Se connecter le container :
+```docker-compose exec eurelis bash```
 
-- utiliser composer :
-```docker-compose exec eurelis composer [XXXX] ```
+- exécuter et tester un exercice (une fois connecté au container) : 
+```cd exercice_X```
+```php check.php```
+
+- utiliser composer (une fois connecté au container) :
+```composer [XXXX] ```
 

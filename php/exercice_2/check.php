@@ -1,7 +1,7 @@
 <?php
 
 include 'script.php';
-include 'custom_assert.php';
+include '../custom_assert.php';
 
 
 $stock_to_check = ex2(2020, 07);
