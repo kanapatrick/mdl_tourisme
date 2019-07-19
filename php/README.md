@@ -2,7 +2,7 @@
 
 ## Consignes & règles 
 
-- Durée : 45min
+- Durée : 30min
 - Les exercices sont indépendants
 - Les exercices ont une difficulté croissante 
 - Toute aide est autorisée (internet, librairies externes, etc)
