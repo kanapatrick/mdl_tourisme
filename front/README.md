@@ -21,3 +21,10 @@ Les critères suivants seront pris en compte pour la notation :
 - résultat
 - lisibilité / clarté du code / sémantique
 - innovation 
+
+## Codes couleurs
+
+- Noir : #251f23
+- Blanc : #ffffff
+- Orange : #ffa018
+- Rouge : #f01819
