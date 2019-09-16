@@ -4,7 +4,7 @@
 
 - Durée : 30min
 - Mettre en page le formulaire selon la maquette fournie (HTML & CSS)
-- Remplir le formulaire 'recette' avec les valeurs présentes dans recette.json
+- Remplir le formulaire 'recette' avec les valeurs présentes dans recette.js (déjà chargé dans la balise head de index.html)
 - Les ingrédients necessaires pour une tournée de popcorn, pour 2 personnes, sont les suivants : 
     - corn : 25
     - butter : 15
