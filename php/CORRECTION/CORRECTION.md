@@ -11,16 +11,16 @@
 
 ## Exercice 2
 
-1 - Check Lundi only (4 anniversaires) 
+1 - Check Lundi only (4 fournées) 
 
 
-2 - Check Lundi + anniversaire (5 anniversaires)
+2 - Check Lundi + anniversaire (5 fournées)
 
 
-3 - Check anniversaire le même jour (6 anniversaires)
+3 - Check anniversaire le même jour (6 fournées)
 
 
-4 - Check weekend (4 anniversaires)
+4 - Check weekend (4 fournées)
 
 
 5 - Check fin de stock, pas de valeur négative
