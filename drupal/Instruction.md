@@ -45,7 +45,7 @@ Afficher dans la zone principale :
 - Body
 
 Afficher en colonne de gauche (Sidebar first)
-- un blog avec la prévision météo à 5 jours sous la forme d'un tableau
+- un bloc avec la prévision météo à 5 jours sous la forme d'un tableau
 
 exemple : 
 | Jour | Tmin | Tmax | Cummul pluie |
