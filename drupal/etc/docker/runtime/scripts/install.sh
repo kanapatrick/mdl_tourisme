@@ -1,18 +1,18 @@
 #!/bin/bash
 
 DOCROOT="/var/www/html"
-SITENAME="Polylogis Immo"
+SITENAME="Drupal TEST"
 USERADMIN="admin"
 ADMINPASS="admin"
-DRUPAL_ROOT="$DOCROOT/docroot"
+DRUPAL_ROOT="$DOCROOT/web"
 PRIVATEFILEDIRECTORY="$DOCROOT/private"
-SYNC_DIRECTORY="../private/config/sync"
+SYNC_DIRECTORY="$PRIVATEFILEDIRECTORY/config/sync"
 DRUSH="$DOCROOT/vendor/bin/drush"
 
 export PATH=$DOCROOT/vendor/bin:$PATH
 
 echo "## mise à jour patch"
-yum install diff-utils patch unzip php72-imagick -y
+yum install diff-utils patch unzip -y
 service httpd restart
 
 cd $DOCROOT
@@ -39,9 +39,9 @@ if [ ! -f $LOCALSETTINGSFILE ]; then
     echo "" >> $LOCALSETTINGSFILE
     echo "// Database" >> $LOCALSETTINGSFILE
     echo "\$databases['default']['default'] = array (
-  'database' => 'db_plv',
-  'username' => 'db_plv',
-  'password' => 'db_plv',
+  'database' => 'db_drupal',
+  'username' => 'db_drupal',
+  'password' => 'db_drupal',
   'prefix' => '',
   'host' => '127.0.0.1',
   'port' => '',
@@ -54,6 +54,7 @@ if [ ! -f $LOCALSETTINGSFILE ]; then
     echo "\$config['config_split.config_split.dev']['status'] = TRUE;" >> $LOCALSETTINGSFILE
 fi
 
+chmod -R 777 $DRUPAL_ROOT/sites/default/files
 chmod -R 0755 $DRUPAL_ROOT/sites/default/settings.local.php
 mkdir -p $DRUPAL_ROOT/sites/default/files/translations
 
@@ -73,16 +74,12 @@ echo "/************************************/"
 echo ""
 
 echo "## Forçage de l'UUID"
-$DRUSH cset system.site uuid 9d4d5365-eba5-048a-287a-106529e9a043 -y
+$DRUSH cset system.site uuid 64ef9f2b-9c94-4c04-b294-e1efc5043a38 -y
 
 echo "Premier Import des config en silencieux"
 drush cim -y
 echo "Second import des config"
 drush cim -y
-
-echo "Import traductions"
-drush locale:check
-drush locale:update
 
 echo ""
 echo "Vidage des caches"
@@ -90,19 +87,9 @@ $DRUSH cr --cache-clear all
 
 $DRUSH status
 
-echo "/******************************/"
-echo "/** Configuration Checkstyle **/"
-echo "/******************************/"
-echo ""
-$DOCROOT/vendor/bin/phpcs --config-set installed_paths $DOCROOT/vendor/drupal/coder/coder_sniffer
-
 echo ""
 echo "/***********/"
 echo "/* Terminé */"
 echo "/***********/"
 echo ""
 
-echo ""
-echo "Inject Default content"
-$DRUSH en default_content
-$DRUSH pmu default_content
