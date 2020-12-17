@@ -15,6 +15,7 @@ Le type de contenu "Voyage" contient les champs :
 ### Liste de villes
 
 | Ville | code Insee |
+|------|------|
 | Rennes | 35238 |
 
 
@@ -48,6 +49,7 @@ Afficher en colonne de gauche (Sidebar first)
 
 exemple : 
 | Jour | Tmin | Tmax | Cummul pluie |
+|------|------|------|-------------|
 | mardi | 12°C | 21°C | 0mm |
 | mercredi | 13°C | 20°C | 5mm | 
 ...
