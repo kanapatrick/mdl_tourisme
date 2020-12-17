@@ -1,0 +1,20 @@
+version: "3"
+services:
+  lamp_plv:
+    container_name: lamp_kata
+    image: eurelis/aws-ami-php7:php72
+    volumes:
+      - ./runtime/vhosts.conf.d:/etc/httpd/vhosts.conf.d
+      - ./runtime/mysql:/var/lib/mysql
+      - ./runtime/log:/var/log/httpd
+      - ./runtime/scripts:/opt/scripts
+      - ./runtime/php/php.ini:/etc/php.ini
+      - ./runtime/php/99-myXdebug.ini:/etc/php-7.2.d/99-myXdebug.ini
+      - ../../drupal:/var/www/html:delegated
+      - ./runtime/conf/.mybashrc:/root/.mybashrc
+      - ./runtime/conf/my.cnf:/etc/my.cnf
+    ports:
+      - 8080:80
+      - 3306:3306
+    env_file: ./drupal.env
+

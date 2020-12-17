@@ -1,0 +1,4 @@
+.idea
+.vscode
+etc/docker/runtime/scripts/dump
+etc/docker/runtime/php/99-myXdebug.ini
