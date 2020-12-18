@@ -1,0 +1,22 @@
+uuid: 8a0f6e30-f9e8-45b5-8da3-ca537211cf38
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - voyages
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: voyages_messages
+theme: voyages
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

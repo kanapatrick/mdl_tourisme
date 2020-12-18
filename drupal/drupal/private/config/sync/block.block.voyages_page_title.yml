@@ -1,0 +1,20 @@
+uuid: 96a214cd-7dcd-4f22-8da2-1db8aa9a0335
+langcode: en
+status: true
+dependencies:
+  theme:
+    - voyages
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: voyages_page_title
+theme: voyages
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,9 @@
+name: voyages
+type: theme
+description: 'Theme du site Voyage'
+package: Other
+core: 8.x
+libraries:
+  - voyages/global-styling
+ 
+base theme: bartik
