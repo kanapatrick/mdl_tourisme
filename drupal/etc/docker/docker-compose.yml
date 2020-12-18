@@ -1,7 +1,7 @@
 version: "3"
 services:
-  lamp_plv:
-    container_name: lamp_kata
+  lamp_kata_drupal:
+    container_name: lamp_kata_drupal
     image: eurelis/aws-ami-php7:php72
     volumes:
       - ./runtime/vhosts.conf.d:/etc/httpd/vhosts.conf.d

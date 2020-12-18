@@ -76,7 +76,7 @@ echo ""
 echo "## Forçage de l'UUID"
 $DRUSH cset system.site uuid 64ef9f2b-9c94-4c04-b294-e1efc5043a38 -y
 
-echo "Premier Import des config en silencieux"
+echo "Premier Import des config"
 drush cim -y
 echo "Second import des config"
 drush cim -y
