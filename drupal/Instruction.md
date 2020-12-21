@@ -1,13 +1,5 @@
 # Projet Voyage
 
-## Créer un Type de contenu "Tourisme"
-
-Le type de contenu "Tourisme" contient les champs : 
-- un titre
-- un champ wysiwyg (body)
-- un champ image
-- un champ Ville => référence à un terme de taxonomy du vocabulaire "ville"
-
 ## Créer un vocabulaire de taxonomie "ville"
 Chaque Terme est composé de :
 - Le nom de la ville
@@ -27,6 +19,14 @@ Chaque Terme est composé de :
 | 17299 | 17300 | Rochefort |
 | 78646 | 78000 | Versailles |
 
+## Créer un Type de contenu "Tourisme"
+
+Le type de contenu "Tourisme" contient les champs : 
+- un titre
+- un champ wysiwyg (body)
+- un champ image
+- un champ Ville => référence à un terme de taxonomy du vocabulaire "ville"
+
 ## Créer un service de récupération des prévisions météo
 
 Le service prend en entrée la ville et renvoi les prévisions météo à 5 jours ( I.E. : aujourd'hui + les 5 prochains jours).
@@ -40,7 +40,6 @@ Les informations attendu en sorties sont :
 Ref : https://api.meteo-concept.com/documentation#forecast-city-day
 
 Token : 5f84ff6e3faadf5d55aa52af0e427e79854779ca7198f5142de2adc54bf8598d
-
 
 ## Affichage attendu 
 
