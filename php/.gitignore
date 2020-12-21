@@ -1,5 +1,0 @@
-supervisord.log
-supervisord.pid
-composer.json
-composer.lock
-vendor
