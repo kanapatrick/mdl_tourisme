@@ -10,3 +10,8 @@
 
 - Tester un exercice (une fois connecté au container) :
 ```php check.php```
+
+## local
+
+- Tester un exercice :
+```php check.php```
