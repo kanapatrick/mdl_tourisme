@@ -792,15 +792,6 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
  }
-$databases['default']['default'] = array (
-  'database' => 'db_drupal',
-  'username' => 'db_drupal',
-  'password' => 'db_drupal',
-  'prefix' => '',
-  'host' => '127.0.0.1',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
+
 $config_directories['sync']='../private/config/sync';
 $settings['install_profile'] = 'minimal';
