@@ -16,3 +16,12 @@ function solution_kata_03($str) {
         return substr($str, 0, $pos);
     return $str;
 }
+
+/*
+ * Special Antoine
+function solution_kata_03($str) {
+  $out = [];
+  preg_match("@([^#]*)#*@", $str, $out);
+  return $out[1];
+}
+ */

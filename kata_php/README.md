@@ -8,10 +8,16 @@
 - Se connecter le container :
 ```docker-compose exec eurelis bash```
 
-- Tester un exercice (une fois connecté au container) :
+- Tester tous les exercices (une fois connecté au container) :
 ```php check.php```
+
+- Tester l'exercice 02 (une fois connecté au container) :
+  ```php check.php 02```
 
 ## local
 
-- Tester un exercice :
+- Tester tous les exercices :
 ```php check.php```
+
+- Tester l'exercice 02 :
+  ```php check.php 02```

@@ -18,3 +18,11 @@ function solution_kata_02($list) {
     $result .= $first[$len-1];
     return $result;
 }
+
+/*
+function solution_kata_02($list) {
+  sort($list);
+  $first = $list[0];
+  return implode('***', str_split($truc));
+}
+*/

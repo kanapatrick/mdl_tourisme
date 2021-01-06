@@ -25,8 +25,35 @@
 # [3] => 5 counted out, 3 is the last element - the survivor!
 
 function solution_kata_08($list, $step) {
-    //
-    // Your code here
-    //
-    return;
+
+  $items = range(1,$list, 1);
+
+    while(TRUE){
+      if(count($items) <= 1) {
+        return array_pop($items);
+      }
+
+      if(count($items) < $step) {
+
+        $new_list = array_merge($items,$items);
+        while(count($new_list) < $step) {
+          $new_list = array_merge($new_list,$items);
+        }
+
+        $out = $new_list[$step - 1];
+        $key = array_search($out, $items);
+        $items = reform_chain($items, $key+1);
+      }
+      else {
+        $items = reform_chain($items, $step);
+      }
+    }
+}
+
+function reform_chain($list, $step) {
+
+  $new_starting = array_slice($list, $step);
+  $new_end = array_slice($list, 0, $step - 1);
+  $items = array_merge($new_starting, $new_end);
+  return $items;
 }
