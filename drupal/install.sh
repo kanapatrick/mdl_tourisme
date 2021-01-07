@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCROOT="/var/www/html"
+DOCROOT="/home/test/Eurelis-CodeChallenge/drupal/drupal"
 SITENAME="Drupal TEST"
 USERADMIN="admin"
 ADMINPASS="admin"
@@ -8,12 +8,8 @@ DRUPAL_ROOT="$DOCROOT/web"
 PRIVATEFILEDIRECTORY="$DOCROOT/private"
 SYNC_DIRECTORY="$PRIVATEFILEDIRECTORY/config/sync"
 DRUSH="$DOCROOT/vendor/bin/drush"
-
+COMPOSER="/home/test/composer"
 export PATH=$DOCROOT/vendor/bin:$PATH
-
-echo "## mise à jour patch"
-yum install diff-utils patch unzip -y
-service httpd restart
 
 cd $DOCROOT
 
@@ -22,8 +18,7 @@ echo "/*****************************************/"
 echo "/* Installation des packets via composer */"
 echo "/*****************************************/"
 echo ""
-composer global require hirak/prestissimo
-composer install
+$COMPOSER install
 
 echo ""
 echo "/****************************************/"
@@ -32,28 +27,6 @@ echo "/****************************************/"
 echo ""
 echo "configuration of default folder"
 chmod -R 0755 $DRUPAL_ROOT/sites/default
-LOCALSETTINGSFILE="$DRUPAL_ROOT/sites/default/settings.local.php"
-if [ ! -f $LOCALSETTINGSFILE ]; then
-    cp $DRUPAL_ROOT/sites/example.settings.local.php $LOCALSETTINGSFILE
-    echo " - Ecriture des données de BDD dans le local.settings.php"
-    echo "" >> $LOCALSETTINGSFILE
-    echo "// Database" >> $LOCALSETTINGSFILE
-    echo "\$databases['default']['default'] = array (
-  'database' => 'db_drupal',
-  'username' => 'db_drupal',
-  'password' => 'db_drupal',
-  'prefix' => '',
-  'host' => '127.0.0.1',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);" >> $LOCALSETTINGSFILE
-
-    echo "" >> $LOCALSETTINGSFILE
-    echo "// Activate config Split Dev" >> $LOCALSETTINGSFILE
-    echo "\$config['config_split.config_split.dev']['status'] = TRUE;" >> $LOCALSETTINGSFILE
-fi
-
 chmod -R 777 $DRUPAL_ROOT/sites/default/files
 chmod -R 0755 $DRUPAL_ROOT/sites/default/settings.local.php
 mkdir -p $DRUPAL_ROOT/sites/default/files/translations

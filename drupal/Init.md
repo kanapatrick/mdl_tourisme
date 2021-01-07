@@ -21,4 +21,4 @@ Aller dans le repertoire "/var/www/html" et lancer l'installation
 
 Aller dans le repertoire "/home/test/Eurelis-CodeChallenge/drupal" et lancer l'installation
 
-``/etc/docker/runtime/script/install.sh``
+``./install.sh``
