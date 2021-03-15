@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 DOCROOT="/var/www/html"
 SITENAME="Drupal TEST"
 USERADMIN="admin"
