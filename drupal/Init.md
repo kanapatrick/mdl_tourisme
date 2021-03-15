@@ -15,7 +15,7 @@ Entrer dans le container
 
 Aller dans le repertoire "/var/www/html" et lancer l'installation
 
-``/opt/scripts/install_indocker.sh``
+``/opt/scripts/install.sh``
 
 ### Accèder au contenaire
 
