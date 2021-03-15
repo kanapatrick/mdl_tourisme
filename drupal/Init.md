@@ -1,7 +1,7 @@
 # Initialisation du Test
 
 ## Dans un docker
-### Démarer docker
+### Démarrer docker
 
 Depuis la racine du drupal
 
@@ -16,6 +16,10 @@ Entrer dans le container
 Aller dans le repertoire "/var/www/html" et lancer l'installation
 
 ``/opt/script/install_indocker.sh``
+
+### Accèder au contenaire
+
+localhost:8080
 
 ## En local
 
