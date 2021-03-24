@@ -1,0 +1,14 @@
+forecast:
+  path: '/forecast/{townCodeInsee}'
+  defaults:
+    _controller: '\Drupal\mdl_tourisme\Controller\MeteoController::getMeteo'
+  requirements:
+    _permission: 'access content'
+
+mdl_tourisme.MeteoController:
+  path: '/first-page'
+  defaults:
+    _controller: '\Drupal\mdl_tourisme\Controller\FirstPageController::content'
+    _title: 'Hello World!'
+  requirements:
+    _permission: 'access content'
