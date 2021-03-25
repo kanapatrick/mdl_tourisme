@@ -31,5 +31,12 @@ class MeteoController extends ControllerBase
     //return new \Symfony\Component\HttpFoundation\JsonResponse($meteo);
 
   }
+  
+  
+  public function meteoparville(){
+      return[
+          "#markup" => t('Hello world')
+      ];
+  }
 
 }

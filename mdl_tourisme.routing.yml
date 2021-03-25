@@ -12,3 +12,11 @@ mdl_tourisme.MeteoController:
     _title: 'Hello World!'
   requirements:
     _permission: 'access content'
+    
+mdl_tourisme.meteo:
+    path: '/meteo'
+    defaults:
+        _form: Drupal\mdl_tourisme\Form\MeteoParVilleForm
+        _title: 'Meteo par ville'
+    requirements:
+        _permission: 'access content'
