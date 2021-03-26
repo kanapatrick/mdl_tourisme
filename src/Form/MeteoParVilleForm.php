@@ -3,6 +3,7 @@
 namespace Drupal\mdl_tourisme\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Logger\LoggerChannelInterface;
@@ -13,7 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * @author kana
  */
-class MeteoParVilleForm extends ConfigFormBase {
+class MeteoParVilleForm extends FormBase {
     
     /**
      * {@inheritdoc}
@@ -38,19 +39,34 @@ class MeteoParVilleForm extends ConfigFormBase {
      * @param FormStateInterface $form_state
      */
     public function buildForm(array $form, FormStateInterface $form_state) {
-        
-        $config = $this->config('mdl_tourisme.custom_meteo');
-        
-        $form['meteo'] = [
-            '#type'=> 'select',
+                
+        $form['ville_meteo'] = [
+            '#type' => 'entity_autocomplete',
+            '#target_type' => 'taxonomy_term',
             '#title'=> $this->t('Selectionnez une ville'),
             '#required' => true,
             '#required_error' => $this->t('Ce champ est obligatoire'),
-            '#vocabulary' => liste_ville,
+            '#selection_settings' => [
+                'target_bundles' => ['liste_ville'],
+              ],
         ];
         
-        return parent::buildForm($form, $form_state);
+        $form['actions']['#type'] = 'actions';
+        $form['actions']['submit'] = [
+            '#type' => 'submit',
+            '#value' => $this->t('Obtenir des informations météo'),
+            '#button_type' => 'primary',
+        ];
+        
+        return $form;
     }
-    
+
+    public function submitForm(array &$form, FormStateInterface $form_state) {
+     
+        $ville_saisi = $form_state->getValue("ville_meteo");
+        
+        //dsm($form_state->getValues());
+        
+    }
 
 }
