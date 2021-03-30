@@ -1,6 +1,7 @@
 services:
     mdl_tourisme.meteo:
         class: Drupal\mdl_tourisme\MeteoParVille
-        argements: ['@config.factory', '@event_dispatcher']
+        tags:
+            - {name: event_tags}
         
             

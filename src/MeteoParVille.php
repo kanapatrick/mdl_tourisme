@@ -1,23 +1,20 @@
 <?php
 
-namespace Drupal\mdl_tourisme\Meteo;
+namespace Drupal\mdl_tourisme;
 
-use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 
+/**
+ * Service de gestion de meteo
+ */
 
 class MeteoParVille {
     
+    
   use StringTranslationTrait;
   
-  /**
-   * The config factory.
-   *
-   * @var \Drupal\Core\Config\ConfigFactoryInterface
-   */
-  protected $configFactory;
   
   /**
    * The event dispatcher.
@@ -29,23 +26,14 @@ class MeteoParVille {
  
 
   private $base_url = 'https://api.meteo-concept.com/api/forecast/daily?token=5f84ff6e3faadf5d55aa52af0e427e79854779ca7198f5142de2adc54bf8598d&insee=';
-
   
-    /**
-   * HelloWorldSalutation constructor.
-   *
-   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
-   *   The config factory.
-   * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface $eventDispatcher
-   *   The event dispatcher.
+  
+  
+  /**
+   * retourner la meteo par ville 
+   * @param type $townCodeInsee
+   * @return boolean
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EventDispatcherInterface $eventDispatcher) {
-    $this->configFactory = $config_factory;
-    $this->eventDispatcher = $eventDispatcher;
-  }
-  
-  
-  
   public function getMeteoByTown($townCodeInsee)
   {
     $uri = $this->base_url.$townCodeInsee;
