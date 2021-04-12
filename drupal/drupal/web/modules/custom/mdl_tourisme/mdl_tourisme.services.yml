@@ -1,0 +1,5 @@
+services:
+  mdl_tourisme.meteo:
+    class: Drupal\mdl_tourisme\Meteo\MeteoParVille
+    tags:
+      - {name: event_tags}
