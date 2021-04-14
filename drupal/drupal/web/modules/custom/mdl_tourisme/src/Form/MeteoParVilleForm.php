@@ -14,7 +14,7 @@ use Drupal\Core\Entity\EntityBase;
 /**
  * Description of MeteoParVilleForm
  *
- * @author kana
+ * @author Alain
  */
 class MeteoParVilleForm extends FormBase {
 
@@ -64,24 +64,12 @@ class MeteoParVilleForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    //eviter qu'il ne redirige vers le meme formulaire vierge(sans données soumises du form) après la soumission
-    $form_state->setRedirect(false);
-    $form_state->disableRedirect();
-    $form_state->setRebuild(TRUE);
-    //dd('tttt');
 
-    //dd($form_state);
-
-
-//    var_dump($form_state);
-//dd($form_state);
 
     $form['ville_meteo'] = [
       '#type' => 'entity_autocomplete',
       '#target_type' => 'taxonomy_term',
       '#title' => $this->t('Selectionnez une ville'),
-      //'#required' => true,
-      //'#required_error' => $this->t('Ce champ est obligatoire'),
       '#selection_settings' => [
         'target_bundles' => ['ville'],
       ],
@@ -91,8 +79,8 @@ class MeteoParVilleForm extends FormBase {
     $header = array(
       array('data' => t('Jours'), 'field' => 'id'),
       array('data' => t('Cummul pluie'), 'field' => 'name'),
-      array('data' => t('Température minimale'), 'field' => 'field1'),
-      array('data' => t('Température maximale'), 'field' => 'field2', 'sort' => 'desc'),
+      array('data' => t('Température minimale'), 'field' => 'tmin'),
+      array('data' => t('Température maximale'), 'field' => 'tmax', 'sort' => 'desc'),
     );
     $form['table'] = array(
       '#theme' => 'table',
@@ -147,13 +135,14 @@ class MeteoParVilleForm extends FormBase {
     $cityName = ucfirst($cityName);
     $remainingSentence = ((ctype_alpha($cityName) && preg_match('/^[aeiou]/i', $cityName))?'d\'':'de ').$cityName;
 
-    drupal_set_message("affichage meteo de la ville $remainingSentence");
+    drupal_set_message("affichage prévisions meteo sur 5 jours de la ville de $remainingSentence");
 
     $header = array(
       array('data' => t('Jours'), 'field' => 'id'),
       array('data' => t('Cummul pluie'), 'field' => 'name'),
       array('data' => t('Température minimale'), 'field' => 'field1'),
-      array('data' => t('Température maximale'), 'field' => 'field2', 'sort' => 'desc')
+      array('data' => t('Température maximale'), 'field' => 'field2', 'sort' => 'desc'),
+      array('data' => t('Code du temps'), 'field' => 'weather', 'sort' => 'desc')
     );
 
 
@@ -162,7 +151,7 @@ class MeteoParVilleForm extends FormBase {
     if(!empty($townMeteoInfoArr)) {
 
       foreach($townMeteoInfoArr["forecast"] as $key => $val){
-        $rows[] = [$key, $val['rr10'], $val['tmin'], $val['tmax']];
+        $rows[] = [$key, $val['rr10'].' mm', $val['tmin'].' °C', $val['tmax'].' °C', $val['weather']];
       }
     }
 

@@ -19,3 +19,11 @@ mdl_tourisme.meteo:
     _title: 'Meteo par ville'
   requirements:
     _permission: 'access content'
+
+mdl_tourisme.meteoImg:
+  path: '/meteoImg'
+  defaults:
+    _form: '\Drupal\mdl_tourisme\Form\MeteoForm'
+    _title: 'Meteo par ville Image'
+  requirements:
+    _permission: 'access content'
