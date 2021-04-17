@@ -1,0 +1,22 @@
+uuid: 63d01f5b-b45e-4e90-91d2-dd18bfb22679
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - voyages
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: voyages_content
+theme: voyages
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: ad5bb3fd-c2d3-4cd3-8681-223c7d901ec8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - voyages
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: voyages_local_actions
+theme: voyages
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

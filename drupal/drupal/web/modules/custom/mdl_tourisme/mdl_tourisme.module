@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks for tourismes features.
+ */
+
+
+function mdl_tourisme_theme($existing, $type, $theme, $path) {
+  return [
+    'mdl_tourisme' => [
+      'variables' => ['test_var' => NULL],
+    ],
+    'meteo_ville' => [
+      'variables' => ['test_var' => 122],
+    ]
+    //'template' => 'mdl_tourisme',
+  ];
+}
