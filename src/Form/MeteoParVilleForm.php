@@ -85,12 +85,15 @@ class MeteoParVilleForm extends FormBase {
     public function submitForm(array &$form, FormStateInterface $form_state) {
 
         $tid = $form_state->getValue("ville_meteo");
-        
+                
         $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+        
         $insee = $term->field_code_insee->value;
+        
         $data = $this->meteo->getMeteoByTown($insee);
         
-        dsm($data);
+       dsm($data);
+        
     }
 
 }
